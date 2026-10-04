@@ -1,0 +1,36 @@
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Coronelli: a research plate with a full-width field view. */
+.coronelli-feature { padding: 1.4rem 0 2.4rem; border-top: 3px double var(--strong-line); margin-bottom: 2.6rem; }
+.coronelli-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.research-category { color: #526557; font-size: .75rem; }
+.coronelli-intro { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3rem; margin-bottom: 2rem; }
+#coronelli-title { font: clamp(2.8rem, 5.8vw, 4.8rem)/1.1 var(--serif); letter-spacing: -.055em; display: flex; align-items: flex-start; gap: .5rem; }
+#coronelli-title > span { color: #9a5b46; font: 1.6rem/1 var(--mono); margin-top: .2rem; }
+.coronelli-tagline { font: 1.1rem/1.8 var(--serif); margin-top: .8rem; }
+.coronelli-description { font-size: .95rem; line-height: 1.95; color: var(--muted); }
+.coronelli-description p + p { margin-top: .7rem; }
+.coronelli-main-shot { border: 1px solid var(--strong-line); padding: .65rem; background: #e7dfce; box-shadow: 5px 5px 0 #d9cdb7; }
+.specimen-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .2rem .3rem .7rem; color: #5b6559; font: .7rem/1.5 var(--mono),var(--sans); }
+.coronelli-main-shot figcaption { display: flex; justify-content: space-between; gap: 1rem; font-size: .75rem; color: var(--muted); padding: .65rem .2rem .1rem; }
+.coronelli-main-shot .image-open { background: #385349; }
+.coronelli-main-shot .project-image-button:hover .image-open { background: #4a6659; }
+.coronelli-detail-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 1.4rem; }
+.coronelli-detail-shots button { width: 100%; padding: .45rem; background: #e9e0cf; border: 1px solid var(--line); text-align: left; }
+.coronelli-detail-shots button:hover { border-color: var(--accent); }
+.coronelli-detail-shots img { width: 100%; height: auto; aspect-ratio: 2.2; object-fit: contain; background: #eaf3f5; }
+.coronelli-detail-shots .thumbnail-label { padding: .5rem .3rem .1rem; font-size: .82rem; }
+.coronelli-detail-shots figcaption { margin-top: .55rem; color: var(--muted); font-size: .75rem; }
+.research-process { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); margin-top: 2rem; border-block: 1px solid var(--line); }
+.research-process > div { padding: 1.2rem 1.15rem 1.25rem 0; }
+.research-process > div + div { border-left: 1px solid var(--line); padding-left: 1.15rem; }
+.research-process span { font: .6rem/1.5 var(--mono); color: #607363; }
+.research-process h4 { font: 1.02rem/1.6 var(--serif); margin: .6rem 0 .5rem; }
+.research-process p { font-size: .8rem; color: var(--muted); line-height: 1.8; }
+.research-footnote { font-size: .7rem; color: var(--muted); margin-top: .8rem; }
+.public-record { border-top: 1px dotted var(--line); padding-top: .9rem; margin-top: 1rem; font-size: .85rem; color: var(--muted); }
+.public-record a { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 850px) { .coronelli-intro { grid-template-columns: 1fr; gap: 1.25rem; } .research-process { grid-template-columns: repeat(2,minmax(0,1fr)); } .research-process > div:nth-child(3) { padding-left: 0; border-left: 0; } .research-process > div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+@media (max-width: 760px) { .coronelli-feature { margin-bottom: 1.5rem; } .coronelli-heading { align-items: flex-start; } .research-category { font-size: .7rem; text-align: right; } .coronelli-main-shot figcaption { display: block; font-size: .7rem; } .coronelli-main-shot figcaption > span + span { display: none; } .coronelli-main-shot { padding: .4rem; box-shadow: 3px 3px 0 #d9cdb7; } .specimen-bar { font-size: .58rem; gap: .3rem; } }
+@media (max-width: 480px) { .coronelli-detail-shots { grid-template-columns: 1fr; gap: 1.1rem; } .research-process > div { padding-right: .7rem; } .research-process > div + div { padding-left: .7rem; } .research-process h4 { font-size: .95rem; } }
+@media print { .coronelli-feature { break-inside: avoid; } .coronelli-main-shot { box-shadow: none; } .image-open { display: none; } }
